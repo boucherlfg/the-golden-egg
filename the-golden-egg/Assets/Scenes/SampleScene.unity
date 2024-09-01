@@ -4756,7 +4756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17dbac743043c0c4bad7df99889f3f4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxChickenDistance: 0.5
+  maxChickenDistance: 1
   screen: {fileID: 1585168632}
   move: {fileID: 4305877701358958102}
   maxChickenCount: 5

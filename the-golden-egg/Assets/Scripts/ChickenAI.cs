@@ -13,7 +13,15 @@ public class ChickenAI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        ServiceManager.Instance.Get<OnDeath>().Subscribe(HandleEnd);
+        ServiceManager.Instance.Get<OnExit>().Subscribe(HandleEnd);
+    }
+
+    private void HandleEnd()
+    {
+        ServiceManager.Instance.Get<OnDeath>().Unsubscribe(HandleEnd);
+        ServiceManager.Instance.Get<OnExit>().Unsubscribe(HandleEnd);
+        Destroy(gameObject);
     }
 
     // Update is called once per frame
@@ -27,3 +35,4 @@ public class ChickenAI : MonoBehaviour
         pathfinder.destination = toFollow.transform.position + (Vector3)Random.insideUnitCircle;
     }
 }
+

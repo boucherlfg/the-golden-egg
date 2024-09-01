@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "TheGoldenEgg.sln"
+    "dotnet.defaultSolution": "the-golden-egg.sln"
 }

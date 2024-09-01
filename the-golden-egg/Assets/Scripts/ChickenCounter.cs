@@ -28,6 +28,7 @@ public class ChickenCounter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(isDead) return;
         var hits = Physics2D.OverlapCircleAll(transform.position, maxChickenDistance).Count(x => x.GetComponent<ChickenAI>());
         if(hits >= maxChickenCount) 
         {

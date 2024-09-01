@@ -130,5 +130,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chicken: {fileID: 3862251302602090177, guid: 26f463a332233aa4ebed74c615ab88fa, type: 3}
-  spawnInterval: 0.5
+  spawnInterval: 0.7
   maxSpawn: 20
+  maximumClucking: 30

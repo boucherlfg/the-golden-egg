@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class ChickenAI : MonoBehaviour
 {
+    private bool end;
     [SerializeField]
     private float speed = 2;
     private MoveScript toFollow;
@@ -21,12 +22,13 @@ public class ChickenAI : MonoBehaviour
     {
         ServiceManager.Instance.Get<OnDeath>().Unsubscribe(HandleEnd);
         ServiceManager.Instance.Get<OnExit>().Unsubscribe(HandleEnd);
-        Destroy(gameObject);
+        end = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(end) return;
         toFollow = toFollow ? toFollow : FindObjectOfType<MoveScript>();
 
         if(!toFollow) return;

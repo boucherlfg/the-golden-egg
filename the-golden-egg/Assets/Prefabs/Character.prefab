@@ -122,6 +122,7 @@ GameObject:
   - component: {fileID: 1819684216259476569}
   - component: {fileID: 1979852187130867391}
   - component: {fileID: 1072151689146551542}
+  - component: {fileID: 7193360116531614951}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -172,7 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rigidBody: {fileID: 7169068781980092775}
-  maxSpeed: 6.59
+  maxSpeed: 2.25
   speed: 2.25
 --- !u!50 &7169068781980092775
 Rigidbody2D:
@@ -288,3 +289,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.45022678, y: 0.36003873}
   m_EdgeRadius: 0
+--- !u!114 &7193360116531614951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8500412559601707740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17dbac743043c0c4bad7df99889f3f4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxChickenDistance: 0.75
+  screen: {fileID: 0}
+  move: {fileID: 5775258047054850119}
+  maxChickenCount: 5
